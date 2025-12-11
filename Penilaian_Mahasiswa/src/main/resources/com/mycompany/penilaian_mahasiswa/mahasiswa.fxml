@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.mycompany.penilaian_mahasiswa.SecondaryController" 
+      spacing="10" 
+      style="-fx-padding: 20;">
+    
+    <!-- Tabel Data Mahasiswa -->
+    <TableView fx:id="mahasiswaTable" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="npmColumn" text="NPM" prefWidth="100" />
+            <TableColumn fx:id="namaColumn" text="Nama" prefWidth="200" />
+            <TableColumn fx:id="jurusanColumn" text="Jurusan" prefWidth="150" />
+            <TableColumn fx:id="angkatanColumn" text="Angkatan" prefWidth="100" />
+            <TableColumn fx:id="prodiColumn" text="Program Studi" prefWidth="150" />
+        </columns>
+    </TableView>
+    
+    <!-- Form Input -->
+    <TextField fx:id="npmField" promptText="NPM"/>
+    <TextField fx:id="namaField" promptText="Nama"/>
+    <TextField fx:id="jurusanField" promptText="Jurusan"/>
+    <TextField fx:id="angkatanField" promptText="Angkatan"/>
+    <TextField fx:id="prodiField" promptText="Program Studi"/>
+    
+    <!-- Tombol -->
+    <Button text="Tambah Mahasiswa" onAction="#saveMahasiswa"/>
+    <Button text="Kembali" fx:id="kembaliButton" onAction="#kembaliKeMenu"/>
+    
+</VBox>
